@@ -1,0 +1,1045 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Mukta:200,300,regular,500,600,700,800);
+
+@import "nullstyle";
+@import "_burger-style";
+@import "_modal-form-style";
+@import "fancybox";
+@import "swiper-bundle.min";
+@import "air-datepicker";
+
+$maxWidth: 1480px;
+$md1: 1200px;
+$md2: 993px;
+$md3: 768px;
+$md4: 536px;
+$md5: 431px;
+
+$fontRoboto: "Roboto";
+$fontPoppins: "Poppins";
+$fontMukta: "Mukta";
+
+$bgcolorMain: rgb(19, 19, 112);
+$bgcolorLight: rgba(201, 229, 248, 0.384);
+$bgcolorsButtons: #0c7df6;
+$bgcolorPhotos: #0a62c1;
+$bgcolorServices: #9ec6f1;
+
+$textColorLight: aliceblue;
+$textColorMain: rgb(19, 19, 112);
+
+.body {
+    min-height: 100%;
+    position: relative;
+}
+.fixed-page {
+    overflow: hidden;
+}
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    background: $bgcolorLight;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    min-height: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @media (max-width: $md2) {
+        max-width: 970px;
+    }
+    @media (max-width: $md3) {
+        max-width: 750px;
+    }
+    @media (max-width: $md4) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+/*заголовки и подзаголовки секций*/
+.title {
+    font-family: $fontRoboto;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1, 5;
+    color: $textColorMain;
+    @media (max-width: $md4) {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+.subtitle {
+    font-family: $fontPoppins;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: $textColorMain;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $bgcolorMain;
+    font-family: $fontPoppins;
+    padding: 0 30px;
+
+    @media (max-width: $md2) {
+        padding: 0 15px;
+    }
+    @media (max-width: $md3) {
+        padding: 0;
+    }
+    // фиксированный верхний блок с меню
+    &__head {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        background: $bgcolorMain;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+        @media (max-width: $md2) {
+            padding: 0 30px;
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        flex: 0 1 20%;
+        color: $textColorLight;
+        font-family: $fontRoboto;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        padding: 10px 15px;
+        @media (max-width: $md1) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $md4) {
+            display: none;
+        }
+    }
+
+    // .header__nav
+
+    &__nav {
+        flex: 1 1 auto;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+
+        padding: 10px 15px;
+        @media (max-width: $md2) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 10px 10px;
+    }
+
+    &__nav a {
+        color: $textColorLight;
+    }
+    &__nav a:hover {
+        text-decoration: underline;
+    }
+    // .header__icons
+
+    &__tel {
+        flex: 0 1 10%;
+
+        padding: 10px 10px;
+    }
+    &__number {
+        font-family: $fontRoboto;
+        color: $textColorLight;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    // .header__icon
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        @media (max-width: $md5) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__row {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .header__row1
+
+    &__row1 {
+        flex: 1 1 70%;
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: $md2) {
+            justify-content: center;
+        }
+        @media (max-width: $md3) {
+            flex-direction: column;
+        }
+    }
+
+    // .header__column1
+
+    &__column1 {
+        flex: 1 0 50%;
+        min-height: 100%;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        @media (max-width: $md3) {
+            background: linear-gradient($bgcolorMain 0%, $bgcolorsButtons 25%, $bgcolorMain 75%);
+            padding: 0 15px;
+        }
+
+        @media (max-width: $md4) {
+            padding: 50px 15px;
+        }
+    }
+
+    // .header__title
+
+    &__title {
+        font-family: $fontRoboto;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1, 5;
+        color: $textColorLight;
+        @media (max-width: $md4) {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    // .header__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+        font-family: $fontPoppins;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: $textColorLight;
+    }
+
+    // .header__button
+
+    &__button {
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+        background-color: $bgcolorsButtons;
+        border-radius: 5%;
+        padding: 15px 20px;
+        text-align: center;
+        font-family: $fontRoboto;
+        font-size: 20px;
+        font-weight: 500;
+        color: $textColorLight;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        top: 10px;
+        box-shadow: 0 5px 0px #02397485;
+        transition: 0.5s ease-in-out;
+    }
+
+    // .header__column2
+
+    &__column2 {
+        flex: 0 1 50%;
+        background: linear-gradient($bgcolorMain 0%, $bgcolorsButtons 25%, $bgcolorMain 75%);
+        @media (max-width: $md3) {
+            display: none;
+        }
+    }
+    &__column2-image {
+        width: 400px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    &__column2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // .header__row2
+
+    &__row2 {
+        flex: 0 0 auto;
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        @media (max-width: $md3) {
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0;
+        }
+    }
+
+    // .header__figure
+
+    &__figure {
+        height: 100%;
+        padding: 20px 0;
+        font-family: $fontRoboto;
+        color: $textColorLight;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .header__figure-number
+
+    &__figure-number {
+        font-size: 1.5rem;
+        font-weight: 600;
+        @media (max-width: $md3) {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.main {
+    flex: 1 1 auto;
+}
+.services {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, $bgcolorsButtons 0%, $bgcolorServices 50%, white 100%);
+    position: relative;
+    text-align: center;
+    padding: 30px 30px;
+
+    @media (max-width: $md2) {
+        padding: 30px 15px;
+    }
+    // .services__title
+
+    &__title {
+        margin-top: 100px;
+        @media (max-width: $md2) {
+            margin-top: 70px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 40px;
+        }
+    }
+
+    // .services__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+    }
+
+    // .services__container
+
+    &__container {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        @media (max-width: $md1) {
+            margin-top: 50px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 30px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 15px;
+        }
+    }
+
+    // .services__item
+
+    &__item {
+        border: 1px solid transparent;
+        box-shadow: 0 5px 5px 0 #44566995;
+        background-color: $bgcolorServices;
+        opacity: 0.9;
+        border-radius: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        @media (max-width: $md5) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    // .services__image
+
+    &__image {
+        flex: 0 0 30%;
+        position: relative;
+        margin-right: 20px;
+    }
+    &__image img {
+        width: 72px;
+        height: 72px;
+    }
+
+    &__image::after {
+        content: "";
+        width: 2px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: -20px;
+        background-color: $bgcolorServices;
+        @media (max-width: $md5) {
+            display: none;
+        }
+    }
+
+    // .services__column
+
+    &__column {
+        height: 100%;
+        flex: 1 1 70%;
+        padding: 0 0 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        :not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .services__procedure
+
+    &__procedure {
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 2rem;
+    }
+
+    // .services__procedure-description
+
+    &__procedure-description {
+        flex: 1 1 auto;
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.5rem;
+    }
+
+    // .services__procedure-write
+
+    &__procedure-write {
+        background: $bgcolorsButtons;
+        font-family: $fontMukta;
+        border: 1px solid transparent;
+        border-radius: 25%;
+        padding: 5px 10px;
+        color: $textColorMain;
+        font-size: 1.5rem;
+        display: flex;
+    }
+    &__procedure-write:hover {
+        cursor: pointer;
+        top: 5px;
+        box-shadow: 0 3px 0 #44566995;
+    }
+
+    &__procedure-write::after {
+        content: "";
+        width: 0;
+        height: 0;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-top: 10px solid transparent;
+        border-left: 20px solid $textColorMain;
+        border-bottom: 10px solid transparent;
+    }
+}
+
+.mission {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    padding: 30px 30px;
+    @media (max-width: $md2) {
+        padding: 30px 15px;
+    }
+
+    // .mission__title
+
+    &__title {
+        margin-top: 100px;
+        @media (max-width: $md2) {
+            margin-top: 70px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 40px;
+        }
+    }
+
+    // .mission__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+    }
+
+    // .mission__container
+
+    &__container {
+        margin-top: 80px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @media (max-width: $md1) {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 30px;
+        }
+    }
+
+    // .mission__column1
+
+    &__column1 {
+        flex: 1 0 50%;
+        max-width: 100%;
+
+        padding: 30px;
+        @media (max-width: $md2) {
+            padding: 50px 20px;
+        }
+        @media (max-width: $md4) {
+            padding: 30px 10px;
+        }
+    }
+
+    // .mission__list-title
+
+    &__list-title {
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 2rem;
+    }
+
+    // .mission__list
+
+    &__list {
+        margin-top: 30px;
+        :not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .mission__list-destination
+
+    &__list-destination {
+        background: url("../images/mission/mission-check.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        padding-left: 70px;
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.8rem;
+    }
+
+    // .mission__list-item
+
+    &__list-item {
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.5rem;
+    }
+
+    // .mission__column2
+
+    &__column2 {
+        flex: 0 1 auto;
+        margin: 0 auto;
+        padding: 100px 30px;
+        text-align: center;
+
+        @media (max-width: $md2) {
+            padding: 50px 20px;
+        }
+        @media (max-width: $md4) {
+            padding: 10px;
+        }
+    }
+    &__image-clinic {
+        max-width: 600px;
+        @media (max-width: $md4) {
+            display: none;
+        }
+    }
+    &__image-clinic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid transparent;
+        border-radius: 5%;
+        box-shadow: 0 5px 5px 0 #9dc9f795;
+    }
+}
+
+.team {
+    width: 100%;
+    height: 100%;
+    background-color: $bgcolorServices;
+    background: radial-gradient(ellipse at center, $bgcolorsButtons 0%, $bgcolorServices 50%, white 100%);
+    text-align: center;
+    padding: 30px 30px;
+    @media (max-width: $md2) {
+        padding: 30px 15px;
+    }
+    // .team__title
+
+    &__title {
+        margin-top: 100px;
+        @media (max-width: $md2) {
+            margin-top: 70px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 40px;
+        }
+    }
+
+    // .team__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+    }
+
+    // .team__container
+
+    &__container {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        @media (max-width: $md1) {
+            margin-top: 50px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 30px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 15px;
+        }
+    }
+
+    // .team__card
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px 0;
+        border: 1px solid $bgcolorServices;
+        box-shadow: 0 5px 5px 0 #44566995;
+        border-radius: 5%;
+        :not(:last-child) {
+            margin-bottom: 30px;
+        }
+        :hover {
+            cursor: pointer;
+        }
+    }
+    &__card-name {
+        flex: 0 1 10%;
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.8rem;
+    }
+
+    // .team__card-text
+
+    &__card-text {
+        flex: 0 1 10%;
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.5rem;
+    }
+
+    // .team__card-photo
+
+    &__card-photo {
+        flex: 0 1 auto;
+        width: 300px;
+        height: 400px;
+
+        @media (max-width: $md5) {
+            width: 250px;
+        }
+    }
+    &__card-photo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    // .team__card-specialization
+
+    // галерея открывается скриптом
+
+    &__card-gallery {
+        display: none;
+        position: relative;
+    }
+
+    &__card-inner {
+        display: flex;
+        justify-content: space-between;
+        overflow-y: auto;
+        @media (max-width: $md2) {
+            justify-content: space-around;
+        }
+    }
+
+    &__photo-gallery {
+        flex: 0 0 30%;
+        width: 250px;
+        height: 350px;
+        @media (max-width: $md4) {
+            display: none;
+        }
+    }
+    &__photo-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description-gallery {
+        flex: 0 0 70%;
+        padding: 20px;
+        font-family: $fontMukta;
+        color: $textColorMain;
+    }
+
+    // .team__name-gallery
+
+    &__name-gallery {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    // .team__specialization-gallery
+
+    &__specialization-gallery {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    // .team__text-gallery
+
+    &__text-gallery {
+        font-size: 1.5rem;
+        @media (max-width: $md4) {
+            margin-top: 30px;
+        }
+    }
+
+    // .team__experience-gallery
+
+    &__experience-gallery {
+        margin-bottom: 15px;
+    }
+
+    // .team__education-gallery
+
+    &__education-gallery {
+        margin-bottom: 15px;
+    }
+
+    // .team__info-gallery
+
+    &__info-gallery {
+        margin-bottom: 15px;
+    }
+
+    &__list-gallery-title {
+        margin-bottom: 15px;
+    }
+    // .team__list-gallery
+
+    &__list-gallery {
+        :not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+//скрываем миниатюры под галереей
+.fancybox__thumb {
+    display: none;
+}
+
+.reviews {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px 30px;
+
+    @media (max-width: $md2) {
+        padding: 30px 15px;
+    }
+    // .reviews__title
+
+    &__title {
+        margin-top: 100px;
+        @media (max-width: $md2) {
+            margin-top: 70px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 40px;
+        }
+    }
+
+    // .reviews__subtitle
+
+    &__subtitle {
+        margin-top: 30px;
+    }
+
+    // .reviews__inner
+
+    &__inner {
+        margin-top: 80px;
+
+        :not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $md1) {
+            margin-top: 50px;
+        }
+        @media (max-width: $md3) {
+            margin-top: 30px;
+        }
+    }
+    &__item {
+        padding: 20px 30px;
+        background: $bgcolorServices;
+        border: 1px solid $bgcolorServices;
+        box-shadow: 0 5px 5px 0 #44566995;
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .reviews__client-photo
+
+    &__client-photo {
+        width: 150px;
+        height: 150px;
+    }
+    &__client-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    // .reviews__text-title
+
+    &__text-title {
+        font-family: $fontMukta;
+        color: $textColorMain;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    // .reviews__text-description
+
+    &__text-description {
+        font-family: $fontPoppins;
+        color: $textColorMain;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}
+.footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: $bgcolorMain;
+    padding: 30px 30px;
+    @media (max-width: $md2) {
+        height: 100%;
+        padding: 30px 15px;
+    }
+    @media (max-width: $md4) {
+        margin-top: 50px;
+    }
+
+    // .footer__row
+
+    &__row {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .footer__column1
+
+    // .footer__logo
+
+    &__logo {
+        color: $textColorLight;
+        font-family: $fontRoboto;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        padding: 10px 15px;
+        @media (max-width: $md1) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $md4) {
+            display: none;
+        }
+    }
+
+    // .footer__column2
+
+    &__column2 {
+        display: flex;
+        justify-content: space-between;
+        :not(:last-child) {
+            margin-right: 30px;
+            @media (max-width: $md4) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    // .footer__list
+
+    &__list {
+        font-family: $fontPoppins;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        :not(:last-child) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $md3) {
+            font-size: 1rem;
+            :not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // .footer__link
+
+    &__list a {
+        font-family: $fontPoppins;
+        color: $textColorLight;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        @media (max-width: $md4) {
+            font-size: 1rem;
+        }
+    }
+    &__list a:hover {
+        text-decoration: underline;
+    }
+    // .footer__contacts
+
+    &__contacts {
+        font-family: $fontPoppins;
+        color: $textColorLight;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        :not(:last-child) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $md3) {
+            font-size: 1rem;
+        }
+    }
+
+    // .footer__icons
+
+    &__icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 15px;
+        :not(:last-child) {
+            margin-right: 20px;
+        }
+        @media (max-width: $md1) {
+            :not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        @media (max-width: $md2) {
+            display: none;
+        }
+    }
+}
