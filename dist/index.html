@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+ 
+    <link rel="stylesheet" href="styles/style.css" />
+  
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/header/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/header/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/header/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/header/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/header/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+   
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <title>Medical Center</title>
+   
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__head">
+            <!--строка контейнер для лого, nav, icons-->
+            <a href="#header">
+              <div class="header__logo"><!--можно поставить изображение-логотип или написать название-->
+                Медицинский центр
+              </div>
+            </a>
+            <div class="header__nav">
+              <ul class="header__list">
+                <li ><a href="#about" class="header__link">О&nbspнас</a></li>
+                <li>
+                  <a href="#services" class="header__link">Услуги</a>
+                </li>
+                <li>
+                  <a href="#mission" class="header__link">Миссия</a>
+                </li>
+                <li>
+                  <a href="#team" class="header__link">Команда</a>
+                </li>
+                <li>
+                  <a href="#reviews" class="header__link">Отзывы</a>
+                </li>
+                <li>
+                  <a href="#footer" class="header__link">Контакты</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <ul class="menu-closet">
+              <li><a href="#about" class="header__link">О&nbspнас</a></li>
+              <li>
+                <a href="#services" class="header__link">Услуги</a>
+              </li>
+              <li>
+                <a href="#mission" class="header__link" >Миссия</a>
+              </li>
+              <li>
+                <a href="#team" class="header__link">Команда</a>
+              </li>
+              <li>
+                <a href="#reviews" class="header__link">Отзывы</a>
+              </li>
+              <li>
+                <a href="#footer" class="header__link">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="burger"><span></span></div>
+           
+            <div class="header__tel">
+              <a href="tel:8(800)1234567" class="header__number">8(800)1234567</a>
+                
+             </div>
+          </div>
+          <div class="header__row" id="about">
+            <div class="header__row1">
+              <div class="header__column1">
+                <h1 class="header__title">
+                  Медицинские услуги высокого уровня
+                </h1>
+                <div class="header__subtitle">
+                  Наша клиника входит в пятерку лучших медицинских центров
+                  города
+                </div>
+                <button class="header__button button">Напишите&nbspнам</button>
+              </div>
+              <div class="header__column2">
+               <div class="header__column2-image"> <img src="images/header/nurse_thumbnail.webp" alt="Фото медсестры"></div>
+              </div>
+            </div>
+
+            <div class="header__row2">
+              <div class="header__figure">
+                <div class="header__figure-number">62</div>
+                <div class="header__figure-text">специалиста</div>
+              </div>
+              <div class="header__figure">
+                <div class="header__figure-number">15 лет</div>
+                <div class="header__figure-text">опыта работы</div>
+              </div>
+              <div class="header__figure">
+                <div class="header__figure-number">96%</div>
+                <div class="header__figure-text">положительных отзывов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--модальное окно с формой-->
+      <div class="popup">
+      <form class="modal-form" id="form"  autocomplete="off">
+          <label class="input-signature">Ваше имя
+              <input
+                class="input-text"
+                  type="name"
+                  name="name"
+                id="name"
+                  tabindex="1"
+                  autocomplete="off"
+                 required/>
+              </label>
+              <label class="input-signature">Ваш телефон
+              
+                <input
+                  type="tel"
+                  name="tel"
+                  tabindex="2"
+                  class="input-text"
+                  id="tel"
+                  autocomplete="off"
+                  required
+                />
+              </label>
+          
+            
+              <label class="input-signature">Ваш e-mail
+      <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  tabindex="3"
+                  class="input-text"
+                  autocomplete="off"
+                  required
+                />
+              </label>
+              <label class="input-signature">Сообщение
+                <textarea
+                  name="message"
+                  type="text"
+                  tabindex="4"
+                  class="input-text"
+                ></textarea>
+              </label>
+        <button type="submit" class="button-input">Отправить</button>
+        </form>
+        <div class="popup-close">X</div>
+      <div class="form-overlay"></div>
+    </div>
+      <main class="main">
+        <section class="services" id="services">
+          <div class="container">
+            <h2 class="services__title title">Услуги</h2>
+            <div class="services__subtitle subtitle">Обследования</div>
+            <div class="services__container">
+              <div class="services__item services__item--1">
+                <div class="services__image">
+                  <img src="images/services/endoscop.png" alt="Иконка" />
+                </div>
+                <div class="services__column">
+                  <div class="services__procedure">Эндоскопия</div>
+                  <div class="services__procedure-description">
+                    осмотр полостей человеческого тела при помощи эндоскопа
+                  </div>
+                  
+                    <button href="#" class="services__procedure-write button-appointment">
+                      Записаться
+                    </button>
+                  </div>
+                </div>
+                <div class="services__item services__item--2">
+                  <div class="services__image">
+                    <img src="images/services/eeg.png" alt="Иконка" />
+                  </div>
+                  <div class="services__column">
+                    <div class="services__procedure">ЭЭГ</div>
+                    <div class="services__procedure-description">
+                    один из методов диагностического обследования головного мозга. 
+                    </div>
+                    
+                    <button href="#" class="services__procedure-write button-appointment">
+                      Записаться
+                    </button>
+                    </div>
+                  </div>
+                  <div class="services__item services__item--3">
+                    <div class="services__image">
+                      <img src="images/services/mammograf.png" alt="Иконка" />
+                    </div>
+                    <div class="services__column">
+                      <div class="services__procedure">Маммография</div>
+                      <div class="services__procedure-description">
+                        это скрининговый рентгенологический метод инструментальной диагностики заболеваний молочной железы., в том числе и опухолевого характера.
+                      </div>
+                      
+                      <button href="#" class="services__procedure-write button-appointment" >
+                        Записаться
+                      </button>
+                      </div>
+                    </div>
+                    <div class="services__item services__item--4">
+                      <div class="services__image">
+                        <img src="images/services/rentgen.png" alt="Иконка" />
+                      </div>
+                      <div class="services__column">
+                        <div class="services__procedure">Рентген</div>
+                        <div class="services__procedure-description">
+                          осмотр полостей человеческого тела при помощи эндоскопа
+                        </div>
+                        
+                        <button href="#" class="services__procedure-write button-appointment">
+                          Записаться
+                        </button>
+                        </div>
+                      </div>
+                      <div class="services__item services__item--5">
+                        <div class="services__image">
+                          <img src="images/services/scrinning.png" alt="Иконка" />
+                        </div>
+                        <div class="services__column">
+                          <div class="services__procedure">УЗИ скриннинг</div>
+                          <div class="services__procedure-description">
+                            это комплексное исследование состояния организма.
+                          </div>
+                          
+                          <button href="#" class="services__procedure-write button-appointment">
+                            Записаться
+                          </button>
+                          </div>
+                        </div>
+                        <div class="services__item services__item--6">
+                          <div class="services__image">
+                            <img src="images/services/uzi.png" alt="Иконка" />
+                          </div>
+                          <div class="services__column">
+                            <div class="services__procedure">УЗИ</div>
+                            <div class="services__procedure-description">
+                              неинвазивное исследование организма человека или животного с помощью ультразвуковых волн.
+                            </div>
+                            
+                            <button href="#" class="services__procedure-write button-appointment">
+                              Записаться
+                            </button>
+                            </div>
+                          </div>
+              </div>
+            </div>
+         
+        </section>
+          <!--модальное окно с формой записи-->
+    <div class="popup" id="popup-appointment" >
+      <form class="modal-form" id="form-appointment" autocomplete="off">
+        <label class="input-signature">
+          Ваше имя
+          <input
+            class="input-text"
+            type="name"
+            name="name"
+            tabindex="1"
+            autocomplete="off"
+            required
+          />
+        </label>
+        <label class="input-signature">
+          Ваш телефон
+
+          <input
+            type="tel"
+            name="tel"
+            tabindex="2"
+            class="input-text"
+            id="tel"
+            autocomplete="off"
+            required
+          />
+        </label>
+
+        <label class="input-signature">
+          Вид обследования
+
+          <div class="checkbox-container">
+            <div class="exam">
+              <input
+                type="checkbox"
+                name="exam1"
+                value="endoscopy"
+                tabindex="3"
+              />
+              Эндоскопия
+            </div>
+            <div class="exam">
+              <input type="checkbox" name="exam2" value="EEG" tabindex="4" />
+              ЭЭГ
+            </div>
+            <div class="exam">
+              <input
+                type="checkbox"
+                name="exam3"
+                value="mammography"
+                tabindex="3"
+              />
+              Маммография
+            </div>
+            <div class="exam">
+              <input
+                type="checkbox"
+                name="exam4"
+                value="x-ray"
+                tabindex="5"
+              />
+              Рентген
+            </div>
+            <div class="exam">
+              <input
+                type="checkbox"
+                name="exam5"
+                value="ultrasound_screening"
+                tabindex="6"
+              />
+              УЗИ скриннинг
+            </div>
+            <div class="exam">
+              <input
+                type="checkbox"
+                name="exam6"
+                value="ultrasound"
+                tabindex="7"
+              />
+              УЗИ
+            </div>
+          </div>
+        </label>
+        <label class="input-signature">
+          Желаемая дата
+          <input
+            type="text"
+            id="date"
+            name="date"
+            class="input-text"
+            tabindex="8"
+          />
+        </label>
+        <button type="submit" class="button-input">
+          Отправить
+        </button>
+      </form>
+      <div class="popup-close" id="popup-close-appointment">X</div>
+      <div class="form-overlay" id="form-overlay-appointment"></div>
+    </div>
+        <section class="mission" id="mission">
+          <div class="container">
+            <h2 class="mission__title title">Миссия</h2>
+            <div class="mission__subtitle subtitle">Мы работаем для того, чтобы на смену историям болезни пришли истории здоровья.</div>
+            <div class="mission__container">
+              <div class="mission__column1">
+                <div class="mission__list-title">Принципы нашей работы:</div>
+          <dl class="mission__list">
+
+            
+
+ <dt class="mission__list-destination">Здоровье пациента превыше всего.</dt>
+   
+<dd class="mission__list-item">
+   Врач берет на себя профессиональную ответственность за результат лечения. 
+   Назначает только необходимое и уделяет достаточно времени каждому пациенту.
+</dd>
+ 
+      
+ <dt class="mission__list-destination"> Профессионализм медицинского персонала </dt>
+  
+ <dd  class="mission__list-item">
+    Специалисты имеют успешный практический опыт не только в частных, но и государственных клиниках. 
+    У нас работает 40 врачей, из них 10 имеют первую и высшую категорию, 4  кандидата медицинских наук, доценты кафедр Института повышения квалификации специалистов здравоохранения. 
+ </dd>
+
+
+   <dt class="mission__list-destination">Доступность и качество медицинских услуг </dt>
+<dd  class="mission__list-item"> Клиника оказывает квалифицированную помощь по умеренным ценам ежедневно с 8 до 20 часов, а также в выходные дни. </dd>
+ 
+
+ <dt class="mission__list-destination">  Постоянное профессиональное развитие </dt>
+<dd  class="mission__list-item"> Повышение квалификации и усовершенствование знаний врачей  обеспечивается регулярным изучением новых методик, участием в конференциях, симпозиумах, исследованиях и написанием научных статей в специализированной периодике.</dd>
+
+ <dt class="mission__list-destination">  Комплексный подход и высокий сервис</dt>
+ <dd  class="mission__list-item">Пациенты получают комплекс услуг в одном месте без лишних действий и ожидания. Вы можете пройти консультации узких специалистов, комплексную диагностику и лечение, а также сдать необходимые анализы. </dd>
+ 
+</dl>
+
+                
+              </div>
+              <div class="mission__column2">
+
+                <div class="mission__image-clinic"><img src="images/mission/mission_clinic.webp" alt="Фото клиники"></div>
+            
+              </div>
+            </div>
+
+          
+        </section>
+        <section class="team" id="team">
+<div class="container">
+  <div class="team__title title">Команда</div>
+  <div class="team__subtitle subtitle">Команда наших врачей приветствует Вас</div>
+  <div class="team__container">
+    <!--doctor1-->
+    <div class="team__card"  data-fancybox="gallery" data-src="#doctor1">
+      <div class="team__card-name">Кузьмин Евгений Иванович</div>
+      <div class="team__card-text">Гастроэнтеролог</div>
+      <div class="team__card-photo"><img src="images/team/doc-1.webp" alt="Фото врача 1"></div>
+      </div>
+    
+    <div class="team__card-gallery" id="doctor1">
+       <div class="team__card-inner">
+          <div class="team__photo-gallery"><img src="images/team/doc-1.webp" alt="Фото врача 1"></div>
+         <div class="team__description-gallery">
+            <div class="team__name-gallery">Кузьмин Евгений Иванович</div>
+         <div class="team__specialization-gallery">Гастроэнтеролог</div>
+         <div class="team__text-gallery">
+          <div class="team__experience-gallery">Стаж работы 25 лет</div>
+          <div class="team__education-gallery">1996 г. Государственный медицинский университет</div>
+          <div class="team__info-gallery">
+          <div class="team__list-gallery-title"> Диагностика, лечение, профилактика заболеваний:</div>
+<ul class="team__list-gallery">
+<li class="team__list-item-gallery">Желудка</li>
+<li class="team__list-item-gallery">Двенадцатиперстной кишки</li>
+<li class="team__list-item-gallery">Кишечника</li>
+<li class="team__list-item-gallery">Печени</li>
+<li class="team__list-item-gallery">Желчного пузыря</li>
+<li class="team__list-item-gallery">Поджелудочной железы</li>
+</ul>
+          </div>
+         </div>
+         </div>
+    
+       </div>
+        
+        </div>
+<!--doctor1end-->
+<!--doctor2-->
+
+        <div class="team__card" data-fancybox="gallery" data-src="#doctor2">
+          <div class="team__card-name">Фоминых Татьяна Сергеевна</div>
+          <div class="team__card-text">Онколог</div>
+          <div class="team__card-photo"><img src="images/team/doc-2.webp" alt="Фото врача 2"></div>
+          </div>
+        
+        <div class="team__card-gallery" id="doctor2">
+           <div class="team__card-inner">
+              <div class="team__photo-gallery"><img src="images/team/doc-2.webp" alt="Фото врача 2"></div>
+             <div class="team__description-gallery">
+                <div class="team__name-gallery">Фоминых Татьяна Сергеевна</div>
+             <div class="team__specialization-gallery">Онколог</div>
+             <div class="team__text-gallery">
+              <div class="team__experience-gallery">Стаж работы 8 лет</div>
+              <div class="team__education-gallery">2011 г. Государственный медицинский университет (лечебное дело)</div>
+              <div class="team__info-gallery">
+              <div class="team__list-gallery-title"> Профиль лечения:</div>
+    <ul class="team__list-gallery">
+    <li class="team__list-item-gallery">Рак легкого</li>
+    <li class="team__list-item-gallery">Мастопатия</li>
+    <li class="team__list-item-gallery">Злокачественные образования кожи</li>
+    <li class="team__list-item-gallery">Фиброаденома молочной железы</li>
+    <li class="team__list-item-gallery">Рак молочной железы</li>
+    <li class="team__list-item-gallery">Саркома</li>
+    </ul>
+              </div>
+             </div>
+             </div>
+         
+           </div>
+            
+            </div>
+            <!--doctor2end-->
+            <!--doctor3-->
+
+        <div class="team__card" data-fancybox="gallery" data-src="#doctor3">
+          <div class="team__card-name">Гайворонский Артур Викторович</div>
+          <div class="team__card-text">Нефролог</div>
+          <div class="team__card-photo"><img src="images/team/doc-3.webp" alt="Фото врача 3"></div>
+          </div>
+        
+        <div class="team__card-gallery" id="doctor3">
+           <div class="team__card-inner">
+              <div class="team__photo-gallery"><img src="images/team/doc-3.webp" alt="Фото врача 3"></div>
+             <div class="team__description-gallery">
+                <div class="team__name-gallery">Гайворонский Артур Викторович</div>
+             <div class="team__specialization-gallery">Нефролог</div>
+             <div class="team__text-gallery">
+              <div class="team__experience-gallery">Стаж работы 14 лет</div>
+              <div class="team__education-gallery">2008 г. Государственный медицинский университет</div>
+              <div class="team__info-gallery">
+              <div class="team__list-gallery-title"> Диагностика, лечение, профилактика заболеваний:</div>
+    <ul class="team__list-gallery">
+    <li class="team__list-item-gallery">Холецистит</li>
+    <li class="team__list-item-gallery">Двенадцатиперстной кишки</li>
+    <li class="team__list-item-gallery">Гломерулонефрит</li>
+    <li class="team__list-item-gallery">Гломерулонефрит</li>
+    
+    </ul>
+              </div>
+             </div>
+             </div>
+       
+           </div>
+            
+            </div>
+            <!--doctor3end-->
+            <!--doctor4-->
+
+        <div class="team__card" data-fancybox="gallery" data-src="#doctor4">
+          <div class="team__card-name">Данченко Никита Андреевич</div>
+          <div class="team__card-text">Травматолог, ортопед</div>
+          <div class="team__card-photo"><img src="images/team/doc-4.webp" alt="Фото врача 4"></div>
+          </div>
+        
+        <div class="team__card-gallery" id="doctor4">
+           <div class="team__card-inner">
+              <div class="team__photo-gallery"><img src="images/team/doc-4.webp" alt="Фото врача 4"></div>
+             <div class="team__description-gallery">
+                <div class="team__name-gallery">Данченко Никита Андреевич</div>
+             <div class="team__specialization-gallery">Травматолог, ортопед</div>
+             <div class="team__text-gallery">
+              <div class="team__experience-gallery">Стаж работы 22 года</div>
+              <div class="team__education-gallery">2000 г. Государственный медицинский университет</div>
+              <div class="team__info-gallery">
+              <div class="team__list-gallery-title"> Диагностика, лечение, профилактика заболеваний:</div>
+    <ul class="team__list-gallery">
+    <li class="team__list-item-gallery">Артроз коленного сустава</li>
+    <li class="team__list-item-gallery">Травма сустава</li>
+    <li class="team__list-item-gallery">Эпикондилит</li>
+    <li class="team__list-item-gallery">Тендинит</li>
+    <li class="team__list-item-gallery">Артрит</li>
+    <li class="team__list-item-gallery">Тендовагинит</li>
+    </ul>
+              </div>
+             </div>
+             </div>
+         
+           </div>
+            
+            </div>
+            <!--doctor4end-->
+            <!--doctor5-->
+
+        <div class="team__card" data-fancybox="gallery" data-src="#doctor5">
+          <div class="team__card-name">Федорова Елена Владимировна</div>
+          <div class="team__card-text">Флеболог</div>
+          <div class="team__card-photo"><img src="images/team/doc-5.webp" alt="Фото врача 5"></div>
+          </div>
+        
+        <div class="team__card-gallery" id="doctor5">
+           <div class="team__card-inner">
+              <div class="team__photo-gallery"><img src="images/team/doc-5.webp" alt="Фото врача 5"></div>
+             <div class="team__description-gallery">
+                <div class="team__name-gallery">Федорова Елена Владимировна</div>
+             <div class="team__specialization-gallery">Флеболог</div>
+             <div class="team__text-gallery">
+              <div class="team__experience-gallery">Стаж работы 10 лет</div>
+              <div class="team__education-gallery">2012 г. Государственный медицинский университет</div>
+              <div class="team__info-gallery">
+              <div class="team__list-gallery-title"> Диагностика, лечение, профилактика заболеваний:</div>
+    <ul class="team__list-gallery">
+    <li class="team__list-item-gallery">Варикоз вен на ногах</li>
+    <li class="team__list-item-gallery">Сосудистые звездочки</li>
+    <li class="team__list-item-gallery">Тромбоз вены</li>
+    </ul>
+              </div>
+             </div>
+             </div>
+         
+           </div>
+            
+            </div>
+            <!--doctor5end-->
+            <!--doctor6-->
+
+        <div class="team__card" data-fancybox="gallery" data-src="#doctor6">
+          <div class="team__card-name">Горбунова Екатерина Александровна</div>
+          <div class="team__card-text">Невролог</div>
+          <div class="team__card-photo"><img src="images/team/doc-6.webp" alt="Фото врача 6"></div>
+          </div>
+        
+        <div class="team__card-gallery" id="doctor6">
+           <div class="team__card-inner">
+              <div class="team__photo-gallery"><img src="images/team/doc-6.webp" alt="Фото врача 6"></div>
+             <div class="team__description-gallery">
+                <div class="team__name-gallery">Горбунова Екатерина Александровна</div>
+             <div class="team__specialization-gallery">Невролог</div>
+             <div class="team__text-gallery">
+              <div class="team__experience-gallery">Стаж работы 8 лет</div>
+              <div class="team__education-gallery">2014 г. Государственный медицинский университет</div>
+              <div class="team__info-gallery">
+              <div class="team__list-gallery-title"> Диагностика, лечение, профилактика заболеваний:</div>
+    <ul class="team__list-gallery">
+    <li class="team__list-item-gallery">Миофасциальный синдром</li>
+    <li class="team__list-item-gallery">Депрессия</li>
+    <li class="team__list-item-gallery">Головная боль напряжения</li>
+    <li class="team__list-item-gallery">Мигрень</li>
+    <li class="team__list-item-gallery">Синдром запястного канала</li>
+    <li class="team__list-item-gallery">Доброкачественное пароксизмальное позиционное головокружение (ДППГ)</li>
+  </ul>
+              </div>
+             </div>
+             </div>
+            
+           </div>
+            
+            </div>
+            <!--doctor6end-->
+    </div>
+  </div>
+
+        </section>
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews__title title">Отзывы</div>
+    <div class="reviews__subtitle subtitle">Честно о нас</div>
+  <div class="reviews__inner swiper"><!--контейнер для слайдера-->
+    <div class="swiper-wrapper"><!--оболочка слайдера-->
+      <!--слайдер1-->
+        <div class="reviews__item swiper-slide">
+    <div class="reviews__client-photo">
+      <img src="images/reviews/reviews_photo1.jpg" alt="">
+    </div>
+    <div class="reviews__client-text">
+      <div class="reviews__text-title">Матвей Ильин</div>
+      <div class="reviews__text-description">Хочу поблагодарить персонал сайта за прекрасное обслуживание. Обратился в клинику с небольшой проблемой. Оказалось, что небольшая проблема потребовала длительного лечения и наблюдения. С этим врачи и медперсонал справились на отлично. Рекомендую.</div>
+    </div>
+        </div>
+        <!--конец слайдер 1-->
+        <!--слайдер 2-->
+        <div class="reviews__item swiper-slide">
+          <div class="reviews__client-photo">
+            <img src="images/reviews/reviews_photo2.jpg" alt="">
+          </div>
+          <div class="reviews__client-text">
+            <div class="reviews__text-title">Алесандр Кузнецов</div>
+            <div class="reviews__text-description">Отличная работа. Думал, "сломался" всерьез и надолго. Однако умные, опытные врачи клиники быстро поставли меня на ноги. Спасибо большое, отличная работа.</div>
+          </div>
+              </div>
+        <!--конец слайдер 2-->
+        <!--слайдер 3-->
+        <div class="reviews__item swiper-slide">
+          <div class="reviews__client-photo">
+            <img src="images/reviews/reviews_photo3.jpg" alt="">
+          </div>
+          <div class="reviews__client-text">
+            <div class="reviews__text-title">Мария Дорошенкова</div>
+            <div class="reviews__text-description">Знаете, в моем возрасте очень важно следить за своим здоровьем. Решила пройти диспансеризацию, обратилась в данную клинику. Обследовали меня самым тщательным образом: провели все необходимые исследования, дали рекомендации, в том числе и по хроническим заболеваниям. В следующий раз обязательно обращусь в это медицинское учреждение.</div>
+          </div>
+              </div>
+        <!--конец слайдер 3-->
+       
+    </div>
+    <!--конец оболочки слайдера-->
+    <div class="swiper-pagination"></div>
+  
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <!--конец слайдера-->
+  </div>
+</section>
+      </main>
+      <footer class="footer" id="footer">
+       <div class="container">
+          <div class="footer__row">
+            <div class="footer__column1">
+              <div class="footer__logo">Медицинский центр</div>
+            </div>
+            <div class="footer__column2">
+              <div class="footer__nav">
+                <ul class="footer__list">
+                  <li ><a href="#about" class="footer__link">О&nbspнас</a></li>
+                  <li>
+                    <a href="#services" class="footer__link">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="#mission" class="footer__link">Миссия</a>
+                  </li>
+                </ul>
+                  
+                
+              </div>
+              <div class="footer__nav">
+                <ul class="footer__list">
+                <li>
+                  <a href="#team" class="footer__link">Команда</a>
+                </li>
+                <li>
+                  <a href="#reviews" class="footer__link">Отзывы</a>
+                </li>
+                <li>
+                  <a href="#footer" class="footer__link">Контакты</a>
+                </li>
+                </ul>
+              </div>
+  <div class="footer__contacts">
+    <div class="footer__contacts-tel">8(900)1234567</div>
+    <div class="footer__contacts-mail">fffff@fjf.com</div>
+    <div class="footer__contacnts-address">Адрес учреждения</div>
+  </div>
+            </div>
+            <div class="footer__column3">
+              <div class="footer__icons">
+                
+                  <a
+                  href="skype:Skype_User?cal"
+                  class="footer__icon"
+                  target="blank"
+                >
+                  <img
+                    src="images/header/icons-soc/skype.png"
+                    alt="Иконка скайп"
+                  />
+                </a>
+                <a
+                  href=" https://vk.com/id*."
+                  class="footer__icon"
+                  target="_blank"
+                >
+                  <img
+                    src="images/header/icons-soc/vk.png"
+                    alt="Иконка в контакте"
+                  />
+                </a>
+                <a
+                  href="https://whatsaps.ru/"
+                  class="footer__icon"
+                  target="_blank"
+                >
+                  <img
+                    src="images/header/icons-soc/whatsapp.png"
+                    alt="Иконка ватсапп"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+       </div>
+      </footer>
+    </div>
+   
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/fancybox.umd.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
+   <script src="scripts/inputmask.min.js"></script>
+  
+   <script src="scripts/script-send.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/script-plugins.js"></script>
+  </body>
+</html>
