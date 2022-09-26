@@ -12,9 +12,9 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED
     $message .= $_POST['exam6'] ."\r\n";
     $message .= "Желаемая дата: " . $_POST['date'];     
 
-    $mailTo = "moksh2008@yandex.ru"; // Ваш e-mail для получения писем. Обязательно проверьте спам, письма часто попадают туда.
+    $mailTo = ""; // Ваш e-mail для получения писем. Обязательно проверьте спам, письма часто попадают туда.
     $subject = "Medical Center Запись"; // Тема сообщения
-    $headers= "pochta@portfolioirinagromova.ru";//Адрес вашего почтового ящика на хостинге. Нужно для корректной отправки с сайта. Указывать обязательно.
+    $headers= "";//Адрес вашего почтового ящика на хостинге. Нужно для корректной отправки с сайта. Указывать обязательно.
     $headers .= "Content-type: text/html; charset=utf-8\r\n";
     $headers .= "From: info@site.ru <info@site.ru>\r\n";
     if(mail($mailTo, $subject, $message, $headers)) {
